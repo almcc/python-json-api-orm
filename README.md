@@ -34,4 +34,3 @@ The goal of this library is to provide and ember-data style ORM for python appli
 	python manage.py loaddata fixtures/*.json
 
 *Note: The default user name and password is admin:admin*
-

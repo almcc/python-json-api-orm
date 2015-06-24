@@ -16,11 +16,12 @@ class Product(models.Model):
     def __str__(self):
         return "{}".format(self.name)
 
+
 class Order(models.Model):
     name = models.CharField(max_length=30)
     total = models.IntegerField()
-    customer = models.ForeignKey(Customer)
-    products = models.ManyToManyField(Product)
+    customer = models.ForeignKey(Customer, related_name="orders")
+    products = models.ManyToManyField(Product, related_name="orders")
     paid = models.BooleanField()
 
     def __str__(self):
